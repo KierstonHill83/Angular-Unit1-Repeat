@@ -1,7 +1,6 @@
-// sample angular code
-
 var app = angular.module('myApp', []);
 
-app.controller('myController', function($scope) {
-  $scope.greeting = "Hello World!";
+app.controller('helloController', function($scope) {
+  $scope.hello = {};
+  $scope.hello.title = "World";
 });
