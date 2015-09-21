@@ -18,8 +18,17 @@
       <h2>Hello, {{hello.title}}!</h2>
     </div>
 <hr>
-    <input type="text" ng-model="name" placeholder="What is your name?">
+    <input type="text" ng-model="name" ng-init="name = 'BoJack'" placeholder="What is your name?">
     <h1>My name is: {{name}}</h1>
+<hr>
+    <select ng-model="animal">
+      <option value="">--Please select--</option>
+      <option>Dogs</option>
+      <option>Cats</option>
+      <option>Dogs and Cats</option>
+      <option>Neither</option>
+    </select>
+    <h3>I love {{animal}}</h3>
 <hr>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
