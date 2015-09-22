@@ -6,10 +6,12 @@ app.controller('helloController', function($scope) {
 });
 
 app.controller('madlibsController', function($scope) {
-  $scope.boyName = "",
-  $scope.adjective = "",
-  $scope.pluralNoun = "",
-  $scope.insect = "",
-  $scope.pNoun = "",
-  $scope.verb = ""
+	$scope.madlibs = {
+	  'boyName': "",
+	  'adjective': "",
+	  'pluralNoun': "",
+	  'insect': "",
+	  'pNoun': "",
+	  'verb': ""
+	};
 });

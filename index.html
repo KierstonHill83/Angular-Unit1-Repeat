@@ -2,7 +2,7 @@
 <html lang="en" ng-app='myApp'>
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Angular Repeat</title>
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -81,34 +81,34 @@
       <form>
         <div class="form-group">
           <label for="boyName">Boy's Name</label>
-          <input type="text" ng-model="boyName" placeholder="Enter a boy's name..">
+          <input type="text" ng-model="madlibs.boyName" placeholder="Enter a boy's name..">
         </div>
         <div class="form-group">
           <label for="adjective">Adjective</label>
-          <input type="text" ng-model="adjective" placeholder="Enter an adjective..">
+          <input type="text" ng-model="madlibs.adjective" placeholder="Enter an adjective..">
         </div>
         <div class="form-group">
           <label for="pluralNoun">Enter a plural noun..</label>
-          <input type="text" ng-model="pluralNoun" placeholder="Enter a plural noun..">
+          <input type="text" ng-model="madlibs.pluralNoun" placeholder="Enter a plural noun..">
         </div>
         <div class="form-group">
           <label for="insect">An insect, plural</label>
-          <input type="text" ng-model="insect" placeholder="Enter an insect, plural..">
+          <input type="text" ng-model="madlibs.insect" placeholder="Enter an insect, plural..">
         </div>
         <div class="form-group">
           <label for="pNoun">Plural noun</label>
-          <input type="text" ng-model="pNoun" placeholder="Enter a plural noun..">
+          <input type="text" ng-model="madlibs.pNoun" placeholder="Enter a plural noun..">
         </div>
          <div class="form-group">
           <label for="verb">A verb ending in "s"</label>
-          <input type="text" ng-model="verb" placeholder="Enter a verb ending in "s"..">
+          <input type="text" ng-model="madlibs.verb" placeholder="Enter a verb ending in "s"..">
         </div>
         <button type="submit" class="btn btn-lg btn-danger">Generate!</button>
       </form>
       <br><br>
       <h1>Mad with the Libs</h1>
-      <h3>I'm in love with {{boyName | uppercase}}. He's so {{adjective | uppercase}}! He has big flat {{pluralNoun | uppercase}}, and when our {{insect | uppercase}} meet, I get {{pNoun | uppercase}} in my stomach. I've fallen for him like a ton of {{verb | uppercase}}, and he shuffles for me, too. But I think he's got another girlfriend. What should I do?</h3>
-      <button type="submit" class="btn btn-lg btn-danger">Play Again?</button>
+      <h3>I'm in love with <strong>{{madlibs.boyName | uppercase}}</strong>. He's so <strong>{{madlibs.adjective | uppercase}}</strong>! He has big flat <strong>{{madlibs.pluralNoun | uppercase}}</strong>, and when our <strong>{{madlibs.insect | uppercase}}</strong> meet, I get <strong>{{madlibs.pNoun | uppercase}}</strong> in my stomach. I've fallen for him like a ton of <strong>{{madlibs.verb | uppercase}}</strong>, and he shuffles for me, too. But I think he's got another girlfriend. What should I do?</h3>
+      <button type="submit" class="btn btn-lg btn-danger" ng-click="madlibs = ''">Play Again?</button>
     </div>
     
 
