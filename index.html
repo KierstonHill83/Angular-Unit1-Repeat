@@ -35,6 +35,50 @@
       <li>My name is {{"BoJack" + " Horseman"}}</li>
       <li>The array [99,43,22] is {{ [99,43,22].length }} items long.</li>
     </ul>
+<hr>
+    <h4>{{3.14159265359 | currency: '€'}}</h4>
+<hr>
+    <h2>Please say something</h2>
+    <input type="text" ng-model="phrase" placeholder="Please input here">
+    <h4>Yelling: {{phrase | uppercase}}</h4>
+    <h4>Whispering: {{phrase | lowercase}}</h4>
+<hr>
+    <ul>
+      <li>{{3.14159265359 | number: 3}}</li>
+      <li>{{3.14159265359 | number: 6}}</li>
+      <li>{{3.14159265359 | number: 1}}</li>
+    </ul>
+<hr>
+    <h3>How many digits of pi do you want?</h3>
+    <select ng-model="pi">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+    <h3><ng-pluralize count="pi"
+      when="{'1': 'Here you go! The first digit of pi!', 'other': 'The first {} digits of pi!'}">
+    </ng-pluralize></h3>
+    <h3>{{3.14159265359 | number: pi}}</h3>
+<hr>
+    <h1>Super Useful Tip Calculator</h1>
+    <p>How much did your meal cost?</p><input type="text" ng-model="meal" placeholder="Enter amount..">
+    <p>How much do you want to tip?</p>
+
+    <select ng-model="tip">
+      <option value=".10">10%</option>
+      <option value=".15">15%</option>
+      <option value=".20">20%</option>
+    </select>
+
+    <h3>Subtotal: {{meal | currency}}</h3>
+    <h3>Tip: {{meal * tip | currency}}</h3>
+<hr>
+    
+    
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
